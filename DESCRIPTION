@@ -1,0 +1,23 @@
+Package: wada
+Title: Estimation of doping use with the cross-wise model 
+Version: 1.0
+Authors@R: 
+    person(given = "Maarten",
+           family = "Cruyff",
+           role = c("aut", "cre"),
+           email = "m.cruyff@uu.nl",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Logistic and loglinear analysis of
+     data collected under the cross-wise model.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Depends: 
+    R (>= 4.0)
+Imports:
+   dplyr (>= 1.0),
+   rlang (>= 0.4)
+
+   
