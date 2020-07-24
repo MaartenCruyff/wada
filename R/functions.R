@@ -114,12 +114,10 @@ logistic <- function(tables){
 
     phat  <- lgt(f$par)
 
-    varp  <- solve(f$hessian) * (exp(f$par)/(1 + exp(f$par))^2)^2
+    se   <- sqrt(solve(f$hessian))
 
-    sep   <- sqrt(varp)
-
-    ci    <- c(min95 = lgt(f$par - 1.96*sep),
-               max95 = lgt(f$par + 1.96*sep))
+    ci    <- c(min95 = lgt(f$par - 1.96*se),
+               max95 = lgt(f$par + 1.96*se))
 
    Fitted <- sum(nobs) * P %*% lg(f$par)
 
